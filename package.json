@@ -1,0 +1,28 @@
+{
+  "name": "angular-two-spike",
+  "version": "1.0.0",
+  "description": "Getting to learn the various components of Angular 2",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oshalygin/AngularTwoSpike.git"
+  },
+  "keywords": [
+    "angular",
+    "two",
+    "spike"
+  ],
+  "author": "oshalygin@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oshalygin/AngularTwoSpike/issues"
+  },
+  "homepage": "https://github.com/oshalygin/AngularTwoSpike#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
