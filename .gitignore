@@ -13,6 +13,7 @@ artifacts/
 node_modules/
 bower_components/
 typings/
+wwwroot/application
 
 # Build results
 [Dd]ebug/
