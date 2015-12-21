@@ -9,13 +9,12 @@ import {bootstrap} from "angular2/platform/browser"
     template: `
             <div class="panel panel-primary">
                 <div class="panel-heading text-center">
-                   <h2>{{ title }}&nbsp;&nbsp;<span class="badge" style="width:50px"> {{ voteCount }}</span></h2>
+                  <span> {{ title }}&nbsp;&nbsp; </span><span class="badge danger" style="width:50px"> {{ voteCount }}</span>
 
                 </div>
                 <div class="panel-body">
                         <p class="text-center"> {{ shortLink }} </p>
                     <hr>
-                    <br>
                     <div class="row">
                         <button type="button" class="btn btn-primary col-md-offset-2 col-md-3" (click)="voteUp()"><i class="glyphicon glyphicon-chevron-up"></i> Up</button>
                         <button type="button" class="btn btn-danger col-md-offset-2 col-md-3" (click)="voteDown()"><i class="glyphicon glyphicon-chevron-down"></i> Down</button>
