@@ -27,7 +27,7 @@ import {bootstrap} from "angular2/platform/browser"
 
 })
 
-export class ArticleCreation {
+class ArticleCreation {
     /**
      *
      */
@@ -39,5 +39,5 @@ export class ArticleCreation {
         console.log(`Created a new article with a name of ${newTitle.value} and a ${newlink.value} `);
     }
 }
-bootstrap(ArticleComponent);
+// bootstrap(ArticleComponent);
 bootstrap(ArticleCreation);
