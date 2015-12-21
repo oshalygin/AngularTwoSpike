@@ -9,18 +9,17 @@ import {bootstrap} from "angular2/platform/browser"
     template: `
             <div class="panel panel-primary">
                 <div class="panel-heading text-center">
-                   <a href="{{ link }}"> Article </a>
-                   <span class="badge"> 4</span>
+                   <h2>{{ title }}&nbsp;&nbsp;<span class="badge" style="width:50px"> {{ voteCount }}</span></h2>
+
                 </div>
                 <div class="panel-body">
-                <div class="row">
-                    <h3>{{ title }}</h3>
-                    <p> {{ shortLink }} </p>
-                </div>
-                <div class="row">
-                    <button type="button" class="btn btn-primary col-md-offset-2 col-md-3" (click)="voteDown()"><i class="glyphicon glyphicon-chevron-up"></i> Up</button>
-                    <button type="button" class="btn btn-danger col-md-offset-2 col-md-3" (click)="voteDown()"><i class="glyphicon glyphicon-chevron-down"></i> Down</button>
-                </div>
+                        <p class="text-center"> {{ shortLink }} </p>
+                    <hr>
+                    <br>
+                    <div class="row">
+                        <button type="button" class="btn btn-primary col-md-offset-2 col-md-3" (click)="voteUp()"><i class="glyphicon glyphicon-chevron-up"></i> Up</button>
+                        <button type="button" class="btn btn-danger col-md-offset-2 col-md-3" (click)="voteDown()"><i class="glyphicon glyphicon-chevron-down"></i> Down</button>
+                    </div>
                 </div>
             </div>
     `
@@ -28,7 +27,26 @@ import {bootstrap} from "angular2/platform/browser"
 
 export class Article {
     voteCount: number;
+    link: string;
+    shortLink: string;
+    title: string;
 
+    /**
+     *
+     */
+    constructor() {
+        this.link = "http://www.angular.io";
+        this.title = "Angular 2";
+        this.voteCount = 0;
+        this.shortLink = this.link.replace("http://www.", "");
+
+    }
+    public voteUp(): void {
+        this.voteCount++;
+    }
+    public voteDown(): void {
+        this.voteCount--;
+    }
 
 }
 
