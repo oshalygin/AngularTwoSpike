@@ -13,10 +13,9 @@ import {bootstrap} from "angular2/platform/browser"
 })
 
 export class Jedi {
-    jedis: string[]
-    /**
-     *
-     */
+
+    jedis: string[];
+
     constructor() {
         this.jedis = ["Luke", "Darth Vader", "Obiwan", "Yoda", "Anakin"];
     }
