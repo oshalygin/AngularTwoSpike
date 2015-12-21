@@ -2,7 +2,7 @@ import {Component} from "angular2/core"
 import {bootstrap} from "angular2/platform/browser"
 
 @Component({
-    selector: "jedi-article",
+    selector: "created-article",
     host: {
         class: "row"
     },
@@ -24,7 +24,8 @@ import {bootstrap} from "angular2/platform/browser"
     `
 })
 
-export class Article {
+export interface ArticleComponent{}
+export class ArticleComponent {
     voteCount: number;
     link: string;
     shortLink: string;
@@ -40,13 +41,15 @@ export class Article {
         this.shortLink = this.link.replace("http://www.", "");
 
     }
-    public voteUp(): void {
+    public voteUp(): boolean {
         this.voteCount++;
+        return false;
     }
-    public voteDown(): void {
+    public voteDown(): boolean {
         this.voteCount--;
+        return false;
     }
 
 }
 
-bootstrap(Article)
+// bootstrap(ArticleComponent)

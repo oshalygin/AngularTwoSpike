@@ -12,5 +12,5 @@ System.import("application/jedis.component.js")
     .then(null, console.error.bind(console));
 System.import("application/article.creation.component.js")
     .then(null, console.error.bind(console));
-System.import("application/article.component.js")
+System.import("application/created.article.component.js")
     .then(null, console.error.bind(console));
