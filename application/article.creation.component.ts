@@ -7,14 +7,14 @@ import {bootstrap} from "angular2/platform/browser"
         <form>
             <div class="form-group">
                 <label for="title">Title</label>
-                <input #title type="input" class="form-control" id="title" placeholder="Title">
+                <input #newTitle class="form-control" id="title" placeholder="Title">
             </div>
             <div class="form-group">
                 <label for="link">Link</label>
-                <input #link type="input" class="form-control" id="link" placeholder="Link">
+                <input #newLink class="form-control" id="link" placeholder="Link">
             </div>
 
-            <button (click)="addNewArticle(title, link)" type="submit" class="btn btn-default">Submit</button>
+            <button (click)="addNewArticle(newTitle, newLink)" type="submit" class="btn btn-default">Submit</button>
     </form>
 
     `
@@ -28,8 +28,8 @@ export class ArticleCreation{
 
     }
 
-   public addNewArticle(title: string, link: string): void {
-       console.log('Created a new article with a name of "%s" and a link of "%s"', title, link);
+   public addNewArticle(newTitle: HTMLInputElement, newlink: HTMLInputElement): void {
+       console.log(`Created a new article with a name of ${newTitle.value} and a ${newlink.value} `);
    }
 }
 
