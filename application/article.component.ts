@@ -86,7 +86,7 @@ class ArticleTemplate {
     }
 
     public addNewArticle(newTitle: HTMLInputElement, newlink: HTMLInputElement): void {
-        console.log(`Created a new article with a name of ${newTitle.value} and a ${newlink.value} `);
+        console.info(`Created a new article with a name of ${newTitle.value} and a ${newlink.value} `);
     }
 }
 
